@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Route: Hashable {
+enum HomeCoordinatorRoute: Hashable {
     case secondView(param: String)
     case thirdView
 
@@ -22,22 +22,4 @@ enum Route: Hashable {
     }
 }
 
-final class HomeCoordinator<T: Hashable>: ObservableObject {
-    @Published var paths: [T] = []
-
-    func push(_ path: T) {
-        paths.append(path)
-    }
-
-    func pop() {
-        paths.removeLast()
-    }
-
-    func popToRoot() {
-        paths = []
-    }
-
-    func replacePath(_ paths: [T]) {
-        self.paths = paths
-    }
-}
+final class HomeCoordinator<T: Hashable>: BaseCoordinator<T> {}

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var coordinator = HomeCoordinator<Route>()
+    @StateObject var coordinator = HomeCoordinator<HomeCoordinatorRoute>()
 
     var body: some View {
         /// ⚠️ A Router view could be used to wrap NavigationStack
@@ -18,13 +18,13 @@ struct HomeView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.pink)
-            .navigationDestination(for: Route.self) { $0.destinationView }
+            .navigationDestination(for: HomeCoordinatorRoute.self) { $0.destinationView }
         }.environmentObject(coordinator)
     }
 }
 
 struct SecondView: View {
-    @EnvironmentObject var coordinator: HomeCoordinator<Route>
+    @EnvironmentObject var coordinator: HomeCoordinator<HomeCoordinatorRoute>
 
     var body: some View {
         VStack {
@@ -41,7 +41,7 @@ struct SecondView: View {
 }
 
 struct ThirdView: View {
-    @EnvironmentObject var coordinator: HomeCoordinator<Route>
+    @EnvironmentObject var coordinator: HomeCoordinator<HomeCoordinatorRoute>
 
     var body: some View {
         VStack {

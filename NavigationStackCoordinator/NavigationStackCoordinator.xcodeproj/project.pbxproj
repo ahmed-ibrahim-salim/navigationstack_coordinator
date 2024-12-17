@@ -22,6 +22,7 @@
 		FC9A7F112D11B60D00C08C2A /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F102D11B60D00C08C2A /* WalletView.swift */; };
 		FC9A7F132D11B7F700C08C2A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F122D11B7F700C08C2A /* SplashView.swift */; };
 		FC9A7F152D11B95400C08C2A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F142D11B95400C08C2A /* OnboardingView.swift */; };
+		FC9A7F172D11D3B900C08C2A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		FC9A7F102D11B60D00C08C2A /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		FC9A7F122D11B7F700C08C2A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FC9A7F142D11B95400C08C2A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 		FC9A7F052D11B41900C08C2A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */,
 				0712626D29EE96B200EE5724 /* HomeCoordinator.swift */,
 			);
 			path = Coordinators;
@@ -159,8 +162,8 @@
 			children = (
 				FC9A7F072D11B4FF00C08C2A /* Tabs */,
 				FC9A7F0E2D11B58300C08C2A /* TapsView.swift */,
-				FC9A7F122D11B7F700C08C2A /* SplashView.swift */,
 				FC9A7F142D11B95400C08C2A /* OnboardingView.swift */,
+				FC9A7F122D11B7F700C08C2A /* SplashView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */,
 				0712626E29EE96B200EE5724 /* HomeCoordinator.swift in Sources */,
 				FC9A7F112D11B60D00C08C2A /* WalletView.swift in Sources */,
+				FC9A7F172D11D3B900C08C2A /* BaseCoordinator.swift in Sources */,
 				FC9A7F132D11B7F700C08C2A /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
