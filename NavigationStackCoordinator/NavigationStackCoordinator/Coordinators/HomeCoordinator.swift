@@ -1,5 +1,5 @@
 //
-//  Coordinator.swift
+//  HomeCoordinator.swift
 //  NavigationStackCoordinator
 //
 //  Created by Saad El Oulladi on 18/04/2023.
@@ -8,7 +8,6 @@
 import SwiftUI
 
 enum Route: Hashable {
-    
     case secondView(param: String)
     case thirdView
 
@@ -20,13 +19,12 @@ enum Route: Hashable {
         case .thirdView:
             ThirdView()
         }
-   }
+    }
 }
 
-final class Coordinator<T: Hashable>: ObservableObject {
-    
+final class HomeCoordinator<T: Hashable>: ObservableObject {
     @Published var paths: [T] = []
-    
+
     func push(_ path: T) {
         paths.append(path)
     }
@@ -35,8 +33,8 @@ final class Coordinator<T: Hashable>: ObservableObject {
         paths.removeLast()
     }
 
-    func popToRoot(){
-       paths = []
+    func popToRoot() {
+        paths = []
     }
 
     func replacePath(_ paths: [T]) {

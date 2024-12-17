@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct NavigationStackCoordinatorApp: App {
+struct RootApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
