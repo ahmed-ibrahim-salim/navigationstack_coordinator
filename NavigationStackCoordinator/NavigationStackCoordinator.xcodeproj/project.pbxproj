@@ -73,7 +73,7 @@
 		FC6E99DA2D13065600AFFA47 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		FC6E99DB2D13065600AFFA47 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		FC6E99DC2D13065600AFFA47 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
-		FC6E99F22D1306B100AFFA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FC6E99F22D1306B100AFFA47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC6E99F82D1315E300AFFA47 /* CustomFontModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFontModifier.swift; sourceTree = "<group>"; };
 		FC6E99FA2D13166800AFFA47 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		FC9A7F082D11B51300C08C2A /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
@@ -134,11 +134,11 @@
 		0728FC4129ED9C3A00CC42B2 /* NavigationStackCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				0728FC4229ED9C3A00CC42B2 /* RootAppView.swift */,
+				FC6E99F22D1306B100AFFA47 /* Info.plist */,
 				FC6E99F72D1315D100AFFA47 /* Modifiers */,
 				FC6E99F42D130A8900AFFA47 /* Extenstions */,
-				FC6E99F22D1306B100AFFA47 /* Info.plist */,
 				FC6E99CB2D13062F00AFFA47 /* Resourses */,
-				0728FC4229ED9C3A00CC42B2 /* RootAppView.swift */,
 				FC9A7F052D11B41900C08C2A /* Coordinators */,
 				FC9A7F062D11B43E00C08C2A /* Views */,
 				0728FC4629ED9C3B00CC42B2 /* Assets.xcassets */,

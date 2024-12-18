@@ -11,6 +11,7 @@ struct TapsView: View {
     private let uicolor = UIColor(resource: .ourPink).withAlphaComponent(0.5).cgColor
     let swifyuiColor = Color(.ourPink).opacity(0.5).cgColor
     private let image = UIImage(resource: .woodIcon)
+
     var body: some View {
         TabView {
             HomeView()
