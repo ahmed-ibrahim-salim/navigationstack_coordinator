@@ -11,8 +11,9 @@ struct HomeView: View {
                 VStack {
                     Text("This is the first view 1️⃣!")
                         .customFont(size: 20, weight: .semibold)
-
                     Text(L10n.hello)
+                        .customFont(size: 20, weight: .semibold)
+                    Text(L10n.lookingGood)
                         .customFont(size: 20, weight: .semibold)
 
                     Button("Go to SecondView") {
