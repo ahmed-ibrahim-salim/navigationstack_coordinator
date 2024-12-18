@@ -10,10 +10,12 @@ import SwiftUI
 struct CustomFontModifier: ViewModifier {
     let size: CGFloat
     let weight: Font.Weight
+    // access layout direction to determine arabic font
     @Environment(\.layoutDirection) private var layoutDirection
 
     private var fontName: String {
         let isRTL = layoutDirection == .rightToLeft
+        // can use arabic font name here
         let family = isRTL ? "Montserrat" : "Montserrat"
 
         switch weight {
@@ -44,5 +46,3 @@ struct CustomFontModifier: ViewModifier {
         content.font(.custom(fontName, size: size))
     }
 }
-
-
