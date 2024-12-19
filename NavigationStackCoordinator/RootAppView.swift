@@ -12,6 +12,7 @@ struct RootApp: App {
     var body: some Scene {
         WindowGroup {
             SplashView()
+            
         }
     }
 }

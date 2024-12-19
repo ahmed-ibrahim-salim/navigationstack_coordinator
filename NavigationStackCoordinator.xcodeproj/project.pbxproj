@@ -27,6 +27,8 @@
 		FC6E99FE2D13197F00AFFA47 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC6E99FC2D13197F00AFFA47 /* Localizable.strings */; };
 		FC8B6A8A2D135E3000B35E2F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC8B6A892D135E3000B35E2F /* swiftgen.yml */; };
 		FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B6A8B2D135E6300B35E2F /* Strings.swift */; };
+		FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC994EF72D144974002B3EF1 /* CustomTabBar.swift */; };
+		FC994EFA2D144993002B3EF1 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC994EF92D144993002B3EF1 /* TabItem.swift */; };
 		FC9A7F092D11B51300C08C2A /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F082D11B51300C08C2A /* OrdersView.swift */; };
 		FC9A7F0B2D11B51C00C08C2A /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F0A2D11B51C00C08C2A /* MessagesView.swift */; };
 		FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F0C2D11B53000C08C2A /* MoreView.swift */; };
@@ -80,6 +82,8 @@
 		FC6E99FF2D13199D00AFFA47 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FC8B6A892D135E3000B35E2F /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		FC8B6A8B2D135E6300B35E2F /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = SOURCE_ROOT; };
+		FC994EF72D144974002B3EF1 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		FC994EF92D144993002B3EF1 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		FC9A7F082D11B51300C08C2A /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
 		FC9A7F0A2D11B51C00C08C2A /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 		FC9A7F0C2D11B53000C08C2A /* MoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreView.swift; sourceTree = "<group>"; };
@@ -217,11 +221,29 @@
 			path = Modifiers;
 			sourceTree = "<group>";
 		};
+		FC994EF52D14493D002B3EF1 /* CustomTapsView */ = {
+			isa = PBXGroup;
+			children = (
+				FC994EF62D14495E002B3EF1 /* TabBarWithTopIndicator */,
+				FC9A7F0E2D11B58300C08C2A /* TapsView.swift */,
+			);
+			path = CustomTapsView;
+			sourceTree = "<group>";
+		};
+		FC994EF62D14495E002B3EF1 /* TabBarWithTopIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				FC994EF72D144974002B3EF1 /* CustomTabBar.swift */,
+				FC994EF92D144993002B3EF1 /* TabItem.swift */,
+			);
+			path = TabBarWithTopIndicator;
+			sourceTree = "<group>";
+		};
 		FC9A7F062D11B43E00C08C2A /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FC9A7F072D11B4FF00C08C2A /* Tabs */,
-				FC9A7F0E2D11B58300C08C2A /* TapsView.swift */,
+				FC994EF52D14493D002B3EF1 /* CustomTapsView */,
 				FC9A7F142D11B95400C08C2A /* OnboardingView.swift */,
 				FC9A7F122D11B7F700C08C2A /* SplashView.swift */,
 			);
@@ -384,12 +406,14 @@
 				FC6E99FB2D13166800AFFA47 /* View.swift in Sources */,
 				FC9A7F0B2D11B51C00C08C2A /* MessagesView.swift in Sources */,
 				FC9A7F0F2D11B58300C08C2A /* TapsView.swift in Sources */,
+				FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */,
 				0728FC4529ED9C3A00CC42B2 /* HomeView.swift in Sources */,
 				FC9A7F152D11B95400C08C2A /* OnboardingView.swift in Sources */,
 				FC9A7F092D11B51300C08C2A /* OrdersView.swift in Sources */,
 				FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */,
 				0728FC4329ED9C3A00CC42B2 /* RootAppView.swift in Sources */,
 				FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */,
+				FC994EFA2D144993002B3EF1 /* TabItem.swift in Sources */,
 				FC9A7F112D11B60D00C08C2A /* WalletView.swift in Sources */,
 				FC6E99F92D1315E300AFFA47 /* CustomFontModifier.swift in Sources */,
 				FC9A7F132D11B7F700C08C2A /* SplashView.swift in Sources */,
