@@ -1,64 +1,23 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var coordinator = HomeCoordinator<HomeCoordinatorRoute>()
-
     var body: some View {
-        /// ⚠️ A Router view could be used to wrap NavigationStack
-        /// We kept it here to demonstrate the issue
-        NavigationStack(path: $coordinator.paths) {
-            ZStack {
-                VStack {
-                    Text("This is the first view 1️⃣!")
-                        .customFont(size: 20, weight: .semibold)
-                    Text(L10n.hello)
-                        .customFont(size: 20, weight: .semibold)
-                    Text(L10n.lookingGood)
-                        .customFont(size: 20, weight: .semibold)
+        ZStack {
+            VStack {
+                Text("This is the first view 1️⃣!")
+                    .customFont(size: 20, weight: .semibold)
 
-                    Button("Go to SecondView") {
-                        coordinator.push(.secondView(param: "Some param"))
-                    }
-                }
-                .padding()
+                Text(L10n.hello)
+                    .customFont(size: 20, weight: .semibold)
+                Text(L10n.lookingGood)
+                    .customFont(size: 20, weight: .semibold)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.pink)
-            .navigationDestination(for: HomeCoordinatorRoute.self) { $0.destinationView }
-        }.environmentObject(coordinator)
+            .padding()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
-struct SecondView: View {
-    @EnvironmentObject var coordinator: HomeCoordinator<HomeCoordinatorRoute>
-
-    var body: some View {
-        VStack {
-            Text("This is the second 2️⃣!")
-            Button("Go to third view") {
-                coordinator.push(.thirdView)
-            }
-            Button("Back") {
-                coordinator.pop()
-            }
-        }
-        .padding()
-    }
-}
-
-struct ThirdView: View {
-    @EnvironmentObject var coordinator: HomeCoordinator<HomeCoordinatorRoute>
-
-    var body: some View {
-        VStack {
-            Text("This is the third View 3️⃣!")
-            Button("Back") {
-                coordinator.pop()
-            }
-            Button("Back to root") {
-                coordinator.popToRoot()
-            }
-        }
-        .padding()
-    }
+#Preview {
+    HomeView()
 }

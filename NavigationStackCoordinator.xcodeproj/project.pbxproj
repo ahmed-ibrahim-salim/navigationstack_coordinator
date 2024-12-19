@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0712626E29EE96B200EE5724 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0712626D29EE96B200EE5724 /* HomeCoordinator.swift */; };
 		0728FC4329ED9C3A00CC42B2 /* RootAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728FC4229ED9C3A00CC42B2 /* RootAppView.swift */; };
 		0728FC4529ED9C3A00CC42B2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728FC4429ED9C3A00CC42B2 /* HomeView.swift */; };
 		0728FC4729ED9C3B00CC42B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0728FC4629ED9C3B00CC42B2 /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 		FC9A7F112D11B60D00C08C2A /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F102D11B60D00C08C2A /* WalletView.swift */; };
 		FC9A7F132D11B7F700C08C2A /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F122D11B7F700C08C2A /* SplashView.swift */; };
 		FC9A7F152D11B95400C08C2A /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F142D11B95400C08C2A /* OnboardingView.swift */; };
-		FC9A7F172D11D3B900C08C2A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0712626D29EE96B200EE5724 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		0728FC3F29ED9C3A00CC42B2 /* NavigationStackCoordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationStackCoordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0728FC4229ED9C3A00CC42B2 /* RootAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootAppView.swift; sourceTree = "<group>"; };
 		0728FC4429ED9C3A00CC42B2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -90,7 +87,6 @@
 		FC9A7F102D11B60D00C08C2A /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		FC9A7F122D11B7F700C08C2A /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		FC9A7F142D11B95400C08C2A /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +145,6 @@
 				FC6E99F72D1315D100AFFA47 /* Modifiers */,
 				FC6E99F42D130A8900AFFA47 /* Extenstions */,
 				FC6E99CB2D13062F00AFFA47 /* Resourses */,
-				FC9A7F052D11B41900C08C2A /* Coordinators */,
 				FC9A7F062D11B43E00C08C2A /* Views */,
 				0728FC4629ED9C3B00CC42B2 /* Assets.xcassets */,
 				0728FC4829ED9C3B00CC42B2 /* NavigationStackCoordinator.entitlements */,
@@ -220,15 +215,6 @@
 				FC6E99F82D1315E300AFFA47 /* CustomFontModifier.swift */,
 			);
 			path = Modifiers;
-			sourceTree = "<group>";
-		};
-		FC9A7F052D11B41900C08C2A /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				FC9A7F162D11D3B900C08C2A /* BaseCoordinator.swift */,
-				0712626D29EE96B200EE5724 /* HomeCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		FC9A7F062D11B43E00C08C2A /* Views */ = {
@@ -404,10 +390,8 @@
 				FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */,
 				0728FC4329ED9C3A00CC42B2 /* RootAppView.swift in Sources */,
 				FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */,
-				0712626E29EE96B200EE5724 /* HomeCoordinator.swift in Sources */,
 				FC9A7F112D11B60D00C08C2A /* WalletView.swift in Sources */,
 				FC6E99F92D1315E300AFFA47 /* CustomFontModifier.swift in Sources */,
-				FC9A7F172D11D3B900C08C2A /* BaseCoordinator.swift in Sources */,
 				FC9A7F132D11B7F700C08C2A /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

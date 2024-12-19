@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct TapsView: View {
-    private let uicolor = UIColor(resource: .ourPink).withAlphaComponent(0.5).cgColor
-    let swifyuiColor = Color(.ourPink).opacity(0.5).cgColor
-    private let image = UIImage(resource: .woodIcon)
+    private let uicolor = UIColor(resource: .pinkFFC0CB10).withAlphaComponent(0.5).cgColor
+    let swifyuiColor = Color(.pinkFFC0CB10).opacity(0.5).cgColor
+    private let image = UIImage(resource: .icBigWood)
 
     var body: some View {
         TabView {
@@ -71,7 +71,7 @@ struct TapsView: View {
             appearance.shadowImage = image
 
             // Configure tab item appearances
-            appearance.stackedLayoutAppearance.selected.iconColor = UIColor(resource: .ourPink)
+            appearance.stackedLayoutAppearance.selected.iconColor = UIColor(resource: .pinkFFC0CB10)
             appearance.stackedLayoutAppearance.selected.titleTextAttributes = [.foregroundColor: UIColor.systemPink]
 
             appearance.stackedLayoutAppearance.normal.iconColor = UIColor.systemGray2
