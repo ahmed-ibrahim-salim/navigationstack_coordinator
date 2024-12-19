@@ -31,14 +31,16 @@ struct CustomTabBar: View {
                             Image(selectedTab == index ? tabItems[index].iconSelected : tabItems[index].iconNotSelected)
                                 .font(.system(size: 24))
                                 .foregroundColor(selectedTab == index ? color : .gray)
-                                .frame(width: 32, height: 32)
+                                .frame(width: 32, height: 20)
+                                .padding(.top, 12)
 
                             Text(tabItems[index].title)
-                                .font(.caption)
+                                .customFont(size: 12, weight: .semibold)
                                 .foregroundColor(selectedTab == index ? color : .gray)
+                                .padding(.bottom, 10)
+                            Spacer()
                         }
                         .frame(maxWidth: .infinity)
-                        .padding(.bottom, 10)
                     }
                 }
             }
