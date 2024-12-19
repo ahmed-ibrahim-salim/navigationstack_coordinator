@@ -29,6 +29,7 @@
 		FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B6A8B2D135E6300B35E2F /* Strings.swift */; };
 		FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC994EF72D144974002B3EF1 /* CustomTabBar.swift */; };
 		FC994EFA2D144993002B3EF1 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC994EF92D144993002B3EF1 /* TabItem.swift */; };
+		FC994EFF2D147B78002B3EF1 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = FC994EFE2D147B78002B3EF1 /* SkeletonUI */; };
 		FC9A7F092D11B51300C08C2A /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F082D11B51300C08C2A /* OrdersView.swift */; };
 		FC9A7F0B2D11B51C00C08C2A /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F0A2D11B51C00C08C2A /* MessagesView.swift */; };
 		FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9A7F0C2D11B53000C08C2A /* MoreView.swift */; };
@@ -98,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC994EFF2D147B78002B3EF1 /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +280,9 @@
 			dependencies = (
 			);
 			name = NavigationStackCoordinator;
+			packageProductDependencies = (
+				FC994EFE2D147B78002B3EF1 /* SkeletonUI */,
+			);
 			productName = NavigationStackCoordinator;
 			productReference = 0728FC3F29ED9C3A00CC42B2 /* NavigationStackCoordinator.app */;
 			productType = "com.apple.product-type.application";
@@ -351,6 +356,9 @@
 				ar,
 			);
 			mainGroup = 0728FC3629ED9C3A00CC42B2;
+			packageReferences = (
+				FC994EFD2D147B78002B3EF1 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+			);
 			productRefGroup = 0728FC4029ED9C3A00CC42B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -778,6 +786,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC994EFD2D147B78002B3EF1 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC994EFE2D147B78002B3EF1 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC994EFD2D147B78002B3EF1 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0728FC3729ED9C3A00CC42B2 /* Project object */;
 }
