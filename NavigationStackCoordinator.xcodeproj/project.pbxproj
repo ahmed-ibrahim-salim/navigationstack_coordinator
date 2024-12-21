@@ -57,6 +57,7 @@
 		FC9FDCF22D1602E9004B08AB /* Selectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FDCF12D1602E9004B08AB /* Selectable.swift */; };
 		FC9FDCF52D160317004B08AB /* SelectionItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FDCF42D160317004B08AB /* SelectionItemsView.swift */; };
 		FC9FDCF72D160743004B08AB /* WithBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9FDCF62D160743004B08AB /* WithBorder.swift */; };
+		FCBAAC962D17688100ACBD9B /* SelectPickUpTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBAAC952D17688100ACBD9B /* SelectPickUpTime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +133,7 @@
 		FC9FDCF12D1602E9004B08AB /* Selectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectable.swift; sourceTree = "<group>"; };
 		FC9FDCF42D160317004B08AB /* SelectionItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionItemsView.swift; sourceTree = "<group>"; };
 		FC9FDCF62D160743004B08AB /* WithBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithBorder.swift; sourceTree = "<group>"; };
+		FCBAAC952D17688100ACBD9B /* SelectPickUpTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPickUpTime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +354,7 @@
 		FC9A7F072D11B4FF00C08C2A /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
+				FCBAAC942D17685F00ACBD9B /* SelectPickUpTime */,
 				FC994F022D147E5B002B3EF1 /* HomeView */,
 				FC9A7F102D11B60D00C08C2A /* WalletView.swift */,
 				FC9A7F082D11B51300C08C2A /* OrdersView.swift */,
@@ -386,6 +389,14 @@
 				FC9FDCF42D160317004B08AB /* SelectionItemsView.swift */,
 			);
 			path = Subviews;
+			sourceTree = "<group>";
+		};
+		FCBAAC942D17685F00ACBD9B /* SelectPickUpTime */ = {
+			isa = PBXGroup;
+			children = (
+				FCBAAC952D17688100ACBD9B /* SelectPickUpTime.swift */,
+			);
+			path = SelectPickUpTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -548,6 +559,7 @@
 				FC9A7F0F2D11B58300C08C2A /* TapsView.swift in Sources */,
 				FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */,
 				FC7D03112D16AC6300EEB560 /* ServiceOptionDTO.swift in Sources */,
+				FCBAAC962D17688100ACBD9B /* SelectPickUpTime.swift in Sources */,
 				0728FC4529ED9C3A00CC42B2 /* HomeView.swift in Sources */,
 				FC994F0D2D147ED4002B3EF1 /* PrimarySearchBar.swift in Sources */,
 				FC7D030F2D16ABBD00EEB560 /* TruckTypeDTO.swift in Sources */,

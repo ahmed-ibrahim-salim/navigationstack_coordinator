@@ -1,11 +1,11 @@
 import SkeletonUI
 import SwiftUI
 
-#Preview {
-    let viewModel = HomeViewModel()
-    let view = HomeView(viewModel: viewModel)
-    return view
-}
+// #Preview {
+//    let viewModel = HomeViewModel()
+//    let view = HomeView(viewModel: viewModel)
+//    return view
+// }
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
