@@ -19,15 +19,13 @@ struct TapsView: View {
 
         VStack {
             // Main content view based on selected tab
-            Group {
-                switch selectedTab {
-                case 0: HomeView()
-                case 1: WalletView()
-                case 2: OrdersView()
-                case 3: MessagesView()
-                case 4: MoreView()
-                default: HomeView()
-                }
+            switch selectedTab {
+            case 0: HomeView(viewModel: HomeViewModel())
+            case 1: WalletView()
+            case 2: OrdersView()
+            case 3: MessagesView()
+            case 4: MoreView()
+            default: HomeView(viewModel: HomeViewModel())
             }
 
             Spacer()

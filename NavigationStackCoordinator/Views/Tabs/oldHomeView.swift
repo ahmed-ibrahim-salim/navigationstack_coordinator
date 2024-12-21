@@ -1,9 +1,15 @@
-import SkeletonUI
+//
+//  oldHomeView.swift
+//  NavigationStackCoordinator
+//
+//  Created by Ahmed Ibrahim on 19/12/2024.
+//
+
 import SwiftUI
 
-struct HomeView: View {
+struct OldHomeView: View {
     @State var isLoading: Bool = true
-    
+
     var body: some View {
         ZStack {
             VStack {
@@ -30,5 +36,5 @@ struct HomeView: View {
 }
 
 #Preview {
-    HomeView()
+    OldHomeView()
 }
