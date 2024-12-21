@@ -37,5 +37,13 @@ struct HomeHeader: View {
             }
             .frame(width: 40, height: 40)
         }
+        .padding()
+        .padding(.bottom, 100)
+        .background(
+            Image(.imgHomeHeaderBackground)
+                .resizable()
+                .scaledToFill()
+                .opacity(0.4)
+        )
     }
 }

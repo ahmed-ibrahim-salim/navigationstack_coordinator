@@ -10,8 +10,7 @@ import Foundation
 struct CommodityDTO {
     let id: Int
     let name: String
-    let image: String
-    
+
     func makeParams() -> [String: Any] {
         [
             "id": id

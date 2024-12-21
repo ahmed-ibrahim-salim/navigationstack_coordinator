@@ -7,40 +7,49 @@
 
 import SwiftUI
 
-struct SelectionItemsView<T: Selectable>: View {
-    let options: [T]
-    @Binding var selectedOption: T?
+struct SelectionItemsView: View {
+    let options: [Option]
+    @Binding var selectedOption: Option?
 
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 12) {
                 ForEach(options) { option in
-                    Button {
-                        withAnimation(.spring()) {
-                            selectedOption = selectedOption?.id == option.id ? nil : option
-                        }
-                    } label: {
-                        HStack(spacing: 6) {
-                            if let image = option.image {
-                                Image(image)
-                            }
-
-                            P6Label(text: option.title)
-                                .lineLimit(1)
-                                .foregroundColor(
-                                    selectedOption?.id == option.id ? .white : .primary
-                                )
-                        }
-                        .frame(height: 40)
-                        .padding(.horizontal, 16)
-                        .background(
-                            selectedOption?.id == option.id ? Color(.black333333) : Color(.white)
-                        )
-                        .addBorder()
-                    }
+                    PickTimeOption(selectedOption: $selectedOption, option: option)
                 }
             }
             .padding(.horizontal, 1)
+        }
+    }
+}
+
+struct PickTimeOption: View {
+    @Binding var selectedOption: Option?
+    let option: Option
+
+    var body: some View {
+        Button {
+            withAnimation(.spring()) {
+                selectedOption = selectedOption?.id == option.id ? nil : option
+            }
+        } label: {
+            HStack(spacing: 6) {
+                if let image = option.image {
+                    Image(image)
+                }
+
+                P6Label(text: option.title)
+                    .lineLimit(1)
+                    .foregroundColor(
+                        selectedOption?.id == option.id ? .white : .primary
+                    )
+            }
+            .frame(height: 40)
+            .padding(.horizontal, 16)
+            .background(
+                selectedOption?.id == option.id ? Color(.black333333) : Color(.white)
+            )
+            .addBorder()
         }
     }
 }

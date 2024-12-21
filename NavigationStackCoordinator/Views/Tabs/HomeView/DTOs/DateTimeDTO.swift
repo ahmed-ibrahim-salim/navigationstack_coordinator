@@ -8,13 +8,11 @@
 import Foundation
 
 struct DateTimeDTO {
-    let date: Date
-    let time: Date
+    let dateTime: String
 
     func makeParams() -> [String: Any] {
         [
-            "date": date,
-            "time": time
+            "date_time": dateTime
         ]
     }
 }

@@ -7,80 +7,49 @@ import SwiftUI
     return view
 }
 
-struct CreateOrderModel {
-    let locationPoints: [LocationPointDTO]
-    let deliveryDateTime: DateTimeDTO
-    let commodity: CommodityDTO
-    let truckType: TruckTypeDTO
-    let serviceOptions: [ServiceOptionDTO]?
-    let note: String?
-    let pictures: [String]?
-
-    func makeParams() -> [String: Any] {
-        var params: [String: Any] = [
-            "locationPoints": locationPoints.map { $0.makeParams() },
-            "deliveryDateTime": deliveryDateTime.makeParams(),
-            "commodity": commodity.makeParams(),
-            "truckType": truckType.makeParams()
-        ]
-
-        if let serviceOptions = serviceOptions {
-            params["serviceOptions"] = serviceOptions.map { $0.makeParams() }
-        }
-
-        if let note = note {
-            params["note"] = note
-        }
-
-        if let pictures = pictures {
-            params["pictures"] = pictures
-        }
-
-        return params
-    }
-}
-
-class HomeViewModel: ObservableObject {
-    @Published var createOrderModel: CreateOrderModel?
-}
-
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
-
+        
     var body: some View {
         ScrollView {
             HomeHeader(name: "Monhamed Ahmed", image: "person.circle")
-                .padding()
-                .padding(.bottom, 100)
-                .background(
-                    Image(.imgHomeHeaderBackground)
-                        .resizable()
-                        .scaledToFill()
-                        .opacity(0.4)
-                )
-
+                
             VStack(alignment: .leading, spacing: 20) {
                 VStack(alignment: .leading, spacing: 16) {
-                    // Search bar
-                    PrimarySearchBar()
-                        .onTapGesture {
-                            print("Search bar tapped")
+                    VStack(alignment: .leading, spacing: 12) {
+                        H9Label(text: "Order locations")
+                        
+                        if viewModel.createOrderModel.locationPoints.count > 0 {
+                            PickedLocationsView(locationPoints: $viewModel.createOrderModel.locationPoints, onTap: { print("open choose location tapped")
+                            })
+                        } else {
+                            PrimarySearchBar()
+                                .onTapGesture {
+                                    print("Search bar tapped")
+                                }
                         }
-                        .padding(.horizontal, 24)
+                    }
+                    .padding(.horizontal, 24)
 
                     VStack(alignment: .leading, spacing: 16) {
                         // Pickup time section
-                        PickTimeSection()
-
+                        PickTimeSection { dateTime in
+                            viewModel.createOrderModel.deliveryDateTime = dateTime
+                            print("dateTime: \(viewModel.createOrderModel.deliveryDateTime.dateTime)")
+                        }
+                            
                         // Commodity type section
-                        ComodityTypeSection()
+                        ComodityTypeSection { commodity in
+                            viewModel.createOrderModel.commodity = commodity
+                            print("commodity: \(viewModel.createOrderModel.commodity.name)")
+                        }
                     }
                     .padding(.leading, 24)
-
+                        
                     VStack(alignment: .leading, spacing: 20) {
                         // Truck type section
                         TruckTypeSection()
-
+                            
                         // Create order button
                         PrimaryButton(title: "Create your order") {
                             // Action
@@ -101,3 +70,4 @@ struct HomeView: View {
         }
     }
 }
+    

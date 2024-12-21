@@ -30,6 +30,9 @@
 		FC7D030D2D16ABAC00EEB560 /* CommodityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D030C2D16ABAC00EEB560 /* CommodityDTO.swift */; };
 		FC7D030F2D16ABBD00EEB560 /* TruckTypeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D030E2D16ABBD00EEB560 /* TruckTypeDTO.swift */; };
 		FC7D03112D16AC6300EEB560 /* ServiceOptionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D03102D16AC6300EEB560 /* ServiceOptionDTO.swift */; };
+		FC7D03132D16B2C000EEB560 /* CreateOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D03122D16B2C000EEB560 /* CreateOrderModel.swift */; };
+		FC7D03152D16B2D900EEB560 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D03142D16B2D900EEB560 /* HomeViewModel.swift */; };
+		FC7D03172D16B34000EEB560 /* PickedLocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D03162D16B34000EEB560 /* PickedLocationsView.swift */; };
 		FC8B6A8A2D135E3000B35E2F /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = FC8B6A892D135E3000B35E2F /* swiftgen.yml */; };
 		FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8B6A8B2D135E6300B35E2F /* Strings.swift */; };
 		FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC994EF72D144974002B3EF1 /* CustomTabBar.swift */; };
@@ -103,6 +106,9 @@
 		FC7D030C2D16ABAC00EEB560 /* CommodityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommodityDTO.swift; sourceTree = "<group>"; };
 		FC7D030E2D16ABBD00EEB560 /* TruckTypeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckTypeDTO.swift; sourceTree = "<group>"; };
 		FC7D03102D16AC6300EEB560 /* ServiceOptionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceOptionDTO.swift; sourceTree = "<group>"; };
+		FC7D03122D16B2C000EEB560 /* CreateOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOrderModel.swift; sourceTree = "<group>"; };
+		FC7D03142D16B2D900EEB560 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC7D03162D16B34000EEB560 /* PickedLocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickedLocationsView.swift; sourceTree = "<group>"; };
 		FC8B6A892D135E3000B35E2F /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = SOURCE_ROOT; };
 		FC8B6A8B2D135E6300B35E2F /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = SOURCE_ROOT; };
 		FC994EF72D144974002B3EF1 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -267,6 +273,7 @@
 				FC7D030C2D16ABAC00EEB560 /* CommodityDTO.swift */,
 				FC7D030E2D16ABBD00EEB560 /* TruckTypeDTO.swift */,
 				FC7D03102D16AC6300EEB560 /* ServiceOptionDTO.swift */,
+				FC7D03122D16B2C000EEB560 /* CreateOrderModel.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -295,6 +302,7 @@
 				FC7D03072D16AB5700EEB560 /* DTOs */,
 				FC994F032D147E6B002B3EF1 /* SubViews */,
 				0728FC4429ED9C3A00CC42B2 /* HomeView.swift */,
+				FC7D03142D16B2D900EEB560 /* HomeViewModel.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -308,6 +316,7 @@
 				FC994F102D147EFF002B3EF1 /* CommoditySection */,
 				FC994F0C2D147ED4002B3EF1 /* PrimarySearchBar.swift */,
 				FC994F0E2D147EE7002B3EF1 /* HomeHeader.swift */,
+				FC7D03162D16B34000EEB560 /* PickedLocationsView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -527,6 +536,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC994F012D147CCD002B3EF1 /* oldHomeView.swift in Sources */,
+				FC7D03152D16B2D900EEB560 /* HomeViewModel.swift in Sources */,
 				FC6E99FB2D13166800AFFA47 /* View.swift in Sources */,
 				FC9FDCF52D160317004B08AB /* SelectionItemsView.swift in Sources */,
 				FC994F0B2D147EB3002B3EF1 /* PickTimeSection.swift in Sources */,
@@ -542,8 +552,10 @@
 				FC994F0D2D147ED4002B3EF1 /* PrimarySearchBar.swift in Sources */,
 				FC7D030F2D16ABBD00EEB560 /* TruckTypeDTO.swift in Sources */,
 				FC9A7F152D11B95400C08C2A /* OnboardingView.swift in Sources */,
+				FC7D03172D16B34000EEB560 /* PickedLocationsView.swift in Sources */,
 				FC9A7F092D11B51300C08C2A /* OrdersView.swift in Sources */,
 				FC994F0F2D147EE7002B3EF1 /* HomeHeader.swift in Sources */,
+				FC7D03132D16B2C000EEB560 /* CreateOrderModel.swift in Sources */,
 				FC8B6A8C2D135E6300B35E2F /* Strings.swift in Sources */,
 				0728FC4329ED9C3A00CC42B2 /* RootAppView.swift in Sources */,
 				FC9A7F0D2D11B53000C08C2A /* MoreView.swift in Sources */,
