@@ -11,9 +11,30 @@ class HomeViewModel: ObservableObject {
     @Published var createOrderModel: CreateOrderModel
     @Published var showSelectPickUpTimeSheet: Bool = false
 
+    @Published var timeOptions: [Option] = [
+        Option(id: 1, title: "10-20 min", image: nil),
+        Option(id: 2, title: "Up to 1 hour", image: nil),
+        Option(id: 44, title: "Schedule delivery", image: .icSchedule)
+    ]
+
+    @Published var commodityOptions: [Option] = [
+        Option(id: 1, title: "Agricultural Products", image: nil),
+        Option(id: 2, title: "Raw Materials", image: nil),
+        Option(id: 3, title: "Construction Materials", image: nil)
+    ]
+
     init(createOrderModel: CreateOrderModel = CreateOrderModel.makeEmpty()) {
         self.createOrderModel = createOrderModel
         chageCreateOrder()
+    }
+
+    func changeTimeDateForSchedule(_ dateTime: DateTimeDTO?) {
+        createOrderModel.deliveryDateTime = dateTime ?? DateTimeDTO(dateTime: "")
+        if let dateTime = dateTime {
+            timeOptions[2].title = dateTime.dateTime
+            return
+        }
+        timeOptions[2].title = "Schedule delivery"
     }
 
     private func chageCreateOrder() {

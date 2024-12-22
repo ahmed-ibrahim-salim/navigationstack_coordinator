@@ -9,13 +9,13 @@ import SwiftUI
 
 protocol Selectable: Identifiable, Equatable {
     var id: Int { get }
-    var title: String { get }
+    var title: String { get set }
     var image: ImageResource? { get }
 }
 
 struct Option: Selectable {
     let id: Int
-    let title: String
+    var title: String
     let image: ImageResource?
 
     func getCommodityDTO() -> CommodityDTO {
@@ -33,6 +33,6 @@ struct Schedule: Selectable {
     }
 
     let id: Int
-    let title: String = "Schedule delivery"
+    var title: String = "Schedule delivery"
     let image: ImageResource?
 }

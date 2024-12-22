@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectionItemsView: View {
-    let options: [Option]
+    @Binding var options: [Option]
     @Binding var selectedOption: Option?
 
     var body: some View {

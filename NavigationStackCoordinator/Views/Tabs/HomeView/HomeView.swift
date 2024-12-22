@@ -33,15 +33,17 @@ struct HomeView: View {
 
                     VStack(alignment: .leading, spacing: 16) {
                         // Pickup time section
-                        PickTimeSection { dateTime in
+                        PickTimeSection(timeOptions: $viewModel.timeOptions) { dateTime in
                             viewModel.createOrderModel.deliveryDateTime = dateTime
                             print("dateTime: \(viewModel.createOrderModel.deliveryDateTime.dateTime)")
                         } openDateTimeSheet: {
                             viewModel.showSelectPickUpTimeSheet.toggle()
+                        } resetSchedule: {
+                            viewModel.changeTimeDateForSchedule(nil)
                         }
                         
                         // Commodity type section
-                        ComodityTypeSection { commodity in
+                        ComodityTypeSection(commodityOptions: $viewModel.commodityOptions) { commodity in
                             viewModel.createOrderModel.commodity = commodity
                             print("commodity: \(viewModel.createOrderModel.commodity.name)")
                         }
@@ -70,7 +72,9 @@ struct HomeView: View {
             .offset(y: -80)
             .background(.white)
             .sheet(isPresented: $viewModel.showSelectPickUpTimeSheet) {
-                SelectPickUpTime()
+                SelectPickUpTime { dateTime in
+                    viewModel.changeTimeDateForSchedule(dateTime)
+                }
             }
         }
     }

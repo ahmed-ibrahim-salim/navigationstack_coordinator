@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-//#error("show sheet")
-
 struct SelectPickUpTime: View {
     @Environment(\.dismiss) private var dismiss
+    var selectedDateTime: (DateTimeDTO) -> Void
     @State private var selectedDate = Date()
 
     var body: some View {
@@ -42,6 +41,9 @@ struct SelectPickUpTime: View {
 
             // Next button
             PrimaryButton(title: "Next") {
+                let dateTime = DateTimeDTO(dateTime: selectedDate.formatted(date: .numeric, time: .shortened))
+                selectedDateTime(dateTime)
+                print(dateTime.dateTime)
                 dismiss()
             }
             .padding()
@@ -51,6 +53,6 @@ struct SelectPickUpTime: View {
     }
 }
 
-#Preview {
-    SelectPickUpTime()
-}
+// #Preview {
+//    SelectPickUpTime()
+// }

@@ -8,28 +8,29 @@
 import SwiftUI
 
 struct PickTimeSection: View {
-    @State private var selectedOption: Option?
+    @Binding var timeOptions: [Option]
     var onChoosingOption: (DateTimeDTO) -> Void
     var openDateTimeSheet: () -> Void
-
-    private let timeOptions: [Option] = [
-        Option(id: 1, title: "10-20 min", image: nil),
-        Option(id: 2, title: "Up to 1 hour", image: nil),
-        Option(id: 44, title: "Schedule delivery", image: .icSchedule)
-    ]
+    var resetSchedule: () -> Void
+    @State private var selectedOption: Option?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             H9Label(text: "Pickup time")
-            SelectionItemsView(options: timeOptions, selectedOption: $selectedOption)
+            SelectionItemsView(options: $timeOptions, selectedOption: $selectedOption)
                 .onChange(of: selectedOption) { newValue in
-                    if let option = newValue, option.id == 44 {
+                    guard let option = newValue else {
+                        resetSchedule()
+                        return
+                    }
+
+                    if option.id == 44 {
                         openDateTimeSheet()
                         return
                     }
-                    if let option = newValue {
-                        onChoosingOption(option.getDateTimeDTO())
-                    }
+
+                    resetSchedule()
+                    onChoosingOption(option.getDateTimeDTO())
                 }
         }
     }
