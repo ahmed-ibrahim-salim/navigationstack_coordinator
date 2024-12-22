@@ -36,8 +36,10 @@ struct HomeView: View {
                         PickTimeSection { dateTime in
                             viewModel.createOrderModel.deliveryDateTime = dateTime
                             print("dateTime: \(viewModel.createOrderModel.deliveryDateTime.dateTime)")
+                        } openDateTimeSheet: {
+                            viewModel.showSelectPickUpTimeSheet.toggle()
                         }
-                            
+                        
                         // Commodity type section
                         ComodityTypeSection { commodity in
                             viewModel.createOrderModel.commodity = commodity
@@ -67,6 +69,9 @@ struct HomeView: View {
             }
             .offset(y: -80)
             .background(.white)
+            .sheet(isPresented: $viewModel.showSelectPickUpTimeSheet) {
+                SelectPickUpTime()
+            }
         }
     }
 }

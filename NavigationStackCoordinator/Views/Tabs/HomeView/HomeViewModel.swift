@@ -9,6 +9,7 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     @Published var createOrderModel: CreateOrderModel
+    @Published var showSelectPickUpTimeSheet: Bool = false
 
     init(createOrderModel: CreateOrderModel = CreateOrderModel.makeEmpty()) {
         self.createOrderModel = createOrderModel
