@@ -13,6 +13,9 @@
 		0728FC5529ED9C3B00CC42B2 /* NavigationStackCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728FC5429ED9C3B00CC42B2 /* NavigationStackCoordinatorTests.swift */; };
 		0728FC5F29ED9C3B00CC42B2 /* NavigationStackCoordinatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728FC5E29ED9C3B00CC42B2 /* NavigationStackCoordinatorUITests.swift */; };
 		0728FC6129ED9C3B00CC42B2 /* NavigationStackCoordinatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0728FC6029ED9C3B00CC42B2 /* NavigationStackCoordinatorUITestsLaunchTests.swift */; };
+		FC68EA412D19C01700AAE65C /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68EA3E2D19C01700AAE65C /* CustomDatePicker.swift */; };
+		FC68EA422D19C01700AAE65C /* FullScreenCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68EA3F2D19C01700AAE65C /* FullScreenCoverView.swift */; };
+		FC68EA442D19C04300AAE65C /* RoundedTopCornersModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC68EA432D19C04300AAE65C /* RoundedTopCornersModifier.swift */; };
 		FC6E99E12D13065600AFFA47 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC6E99CF2D13065600AFFA47 /* Montserrat-Bold.ttf */; };
 		FC6E99E22D13065600AFFA47 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC6E99D02D13065600AFFA47 /* Montserrat-Regular.ttf */; };
 		FC6E99E32D13065600AFFA47 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC6E99D12D13065600AFFA47 /* Montserrat-Light.ttf */; };
@@ -88,6 +91,9 @@
 		0728FC5A29ED9C3B00CC42B2 /* NavigationStackCoordinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationStackCoordinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0728FC5E29ED9C3B00CC42B2 /* NavigationStackCoordinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackCoordinatorUITests.swift; sourceTree = "<group>"; };
 		0728FC6029ED9C3B00CC42B2 /* NavigationStackCoordinatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackCoordinatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC68EA3E2D19C01700AAE65C /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		FC68EA3F2D19C01700AAE65C /* FullScreenCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenCoverView.swift; sourceTree = "<group>"; };
+		FC68EA432D19C04300AAE65C /* RoundedTopCornersModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTopCornersModifier.swift; sourceTree = "<group>"; };
 		FC6E99CF2D13065600AFFA47 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		FC6E99D02D13065600AFFA47 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		FC6E99D12D13065600AFFA47 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
@@ -185,6 +191,7 @@
 		0728FC4129ED9C3A00CC42B2 /* NavigationStackCoordinator */ = {
 			isa = PBXGroup;
 			children = (
+				FC68EA402D19C01700AAE65C /* CommonViews */,
 				FC994F132D14BE77002B3EF1 /* Labels */,
 				FC8B6A8B2D135E6300B35E2F /* Strings.swift */,
 				FC8B6A892D135E3000B35E2F /* swiftgen.yml */,
@@ -216,6 +223,15 @@
 				0728FC6029ED9C3B00CC42B2 /* NavigationStackCoordinatorUITestsLaunchTests.swift */,
 			);
 			path = NavigationStackCoordinatorUITests;
+			sourceTree = "<group>";
+		};
+		FC68EA402D19C01700AAE65C /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				FC68EA3E2D19C01700AAE65C /* CustomDatePicker.swift */,
+				FC68EA3F2D19C01700AAE65C /* FullScreenCoverView.swift */,
+			);
+			path = CommonViews;
 			sourceTree = "<group>";
 		};
 		FC6E99CB2D13062F00AFFA47 /* Resourses */ = {
@@ -261,6 +277,7 @@
 		FC6E99F72D1315D100AFFA47 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				FC68EA432D19C04300AAE65C /* RoundedTopCornersModifier.swift */,
 				FC6E99F82D1315E300AFFA47 /* CustomFontModifier.swift */,
 				FC9FDCF62D160743004B08AB /* WithBorder.swift */,
 			);
@@ -555,6 +572,8 @@
 				FC9A7F0B2D11B51C00C08C2A /* MessagesView.swift in Sources */,
 				FC994F152D14BE99002B3EF1 /* labels.swift in Sources */,
 				FC9FDCF72D160743004B08AB /* WithBorder.swift in Sources */,
+				FC68EA412D19C01700AAE65C /* CustomDatePicker.swift in Sources */,
+				FC68EA422D19C01700AAE65C /* FullScreenCoverView.swift in Sources */,
 				FC994F072D147E91002B3EF1 /* TruckTypeSection.swift in Sources */,
 				FC9A7F0F2D11B58300C08C2A /* TapsView.swift in Sources */,
 				FC994EF82D144974002B3EF1 /* CustomTabBar.swift in Sources */,
@@ -565,6 +584,7 @@
 				FC7D030F2D16ABBD00EEB560 /* TruckTypeDTO.swift in Sources */,
 				FC9A7F152D11B95400C08C2A /* OnboardingView.swift in Sources */,
 				FC7D03172D16B34000EEB560 /* PickedLocationsView.swift in Sources */,
+				FC68EA442D19C04300AAE65C /* RoundedTopCornersModifier.swift in Sources */,
 				FC9A7F092D11B51300C08C2A /* OrdersView.swift in Sources */,
 				FC994F0F2D147EE7002B3EF1 /* HomeHeader.swift in Sources */,
 				FC7D03132D16B2C000EEB560 /* CreateOrderModel.swift in Sources */,
