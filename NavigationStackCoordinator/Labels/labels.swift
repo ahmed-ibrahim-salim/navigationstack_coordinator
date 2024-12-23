@@ -52,6 +52,15 @@ struct H9Label: View {
     }
 }
 
+struct H4Label: View {
+    let text: String
+
+    var body: some View {
+        Text(text)
+            .customFont(size: 20, weight: .semibold)
+    }
+}
+
 // Buttons
 struct B1Label: View {
     let text: String

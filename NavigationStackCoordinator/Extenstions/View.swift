@@ -15,4 +15,8 @@ extension View {
     func addBorder(radius: CGFloat = 12.0, strokeColor: Color = .init(.grayF2F2F2), lineWidth: CGFloat = 1.0) -> some View {
         modifier(WithBorder(radius: radius, strokeColor: strokeColor, lineWidth: lineWidth))
     }
+
+    func roundedTopCorners(radius: CGFloat = 16) -> some View {
+        modifier(RoundedTopCornersModifier(radius: radius))
+    }
 }

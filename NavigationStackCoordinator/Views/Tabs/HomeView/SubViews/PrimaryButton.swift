@@ -18,7 +18,9 @@ struct PrimaryButton: View {
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(Color.pink)
-                .cornerRadius(12)
+                .clipShape(
+                    RoundedRectangle(cornerRadius: 12)
+                )
         }
     }
 }

@@ -16,32 +16,32 @@ struct SelectPickUpTime: View {
     @State private var selectedTime = Date()
 
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
+        VStack {
+            Rectangle()
+                .fill(Color.clear)
+                .frame(height: 2)
 
             // Header
             HStack {
-                Text(showingTimePicker ? "Select the pickup Time" : "Select the pickup Date")
-                    .font(.title2)
-                    .bold()
+                H4Label(text: showingTimePicker ? "Select the pickup Time" : "Select the pickup Date")
                 Spacer()
                 Button(action: { dismiss() }) {
                     Image(systemName: "xmark.circle")
                         .foregroundStyle(.gray)
                 }
             }
-            .padding(.horizontal)
+            .padding()
+            .background(.white)
+            .roundedTopCorners()
 
             if !showingTimePicker {
-                // Date picker
-                DatePicker(
-                    "Select Date",
+                CustomDatePicker(
                     selection: $selectedDate,
-                    displayedComponents: [.date]
+                    displayedComponents: [.date],
+                    style: .graphical
                 )
-                .datePickerStyle(.graphical)
-                .tint(.pink)
                 .padding()
+                .background(.white)
                 .transition(.asymmetric(
                     insertion: .move(edge: .leading),
                     removal: .move(edge: .leading)
@@ -54,20 +54,19 @@ struct SelectPickUpTime: View {
                     }
                 }
                 .padding()
+                .background(.white)
                 .transition(.asymmetric(
                     insertion: .move(edge: .trailing),
                     removal: .move(edge: .trailing)
                 ))
             } else {
-                // Native time picker
-                DatePicker(
-                    "",
+                CustomDatePicker(
                     selection: $selectedTime,
-                    displayedComponents: [.hourAndMinute]
+                    displayedComponents: [.hourAndMinute],
+                    style: .wheel
                 )
-                .datePickerStyle(.wheel)
-                .labelsHidden()
                 .padding()
+                .background(.white)
                 .transition(.asymmetric(
                     insertion: .move(edge: .trailing),
                     removal: .move(edge: .trailing)
@@ -75,28 +74,31 @@ struct SelectPickUpTime: View {
 
                 // Done button
                 PrimaryButton(title: "Done") {
-                    let calendar = Calendar.current
-                    let timeComponents = calendar.dateComponents([.hour, .minute], from: selectedTime)
-                    var dateComponents = calendar.dateComponents([.year, .month, .day], from: selectedDate)
-                    dateComponents.hour = timeComponents.hour
-                    dateComponents.minute = timeComponents.minute
-
-                    if let date = calendar.date(from: dateComponents) {
+                    if let date = getDateComponents() {
                         let dateTime = DateTimeDTO(dateTime: date.formatted(date: .numeric, time: .shortened))
                         selectedDateTime(dateTime)
                         dismiss()
                     }
                 }
                 .padding()
+                .background(.white)
                 .transition(.asymmetric(
                     insertion: .move(edge: .trailing),
                     removal: .move(edge: .trailing)
                 ))
             }
         }
+        .padding(.horizontal, 4)
         .animation(.easeInOut, value: showingTimePicker)
-        .background(Color(.grayF9FAFB))
-        .padding(.top)
+    }
+
+    private func getDateComponents() -> Date? {
+        let calendar = Calendar.current
+        let timeComponents = calendar.dateComponents([.hour, .minute], from: selectedTime)
+        var dateComponents = calendar.dateComponents([.year, .month, .day], from: selectedDate)
+        dateComponents.hour = timeComponents.hour
+        dateComponents.minute = timeComponents.minute
+        return calendar.date(from: dateComponents)
     }
 }
 

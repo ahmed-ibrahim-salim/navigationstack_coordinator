@@ -33,12 +33,12 @@ struct OnboardingView: View {
                     .frame(maxWidth: .infinity)
                     .padding()
                     .background(Color.pink)
-                    .cornerRadius(10)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 10)
+                    )
             }
             .padding(.horizontal, 32)
             .padding(.bottom, 50)
         }
     }
 }
-
-// End of file. No additional code.

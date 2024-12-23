@@ -9,16 +9,16 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var viewModel: HomeViewModel
-        
+
     var body: some View {
         ScrollView {
             HomeHeader(name: "Monhamed Ahmed", image: "person.circle")
-                
+
             VStack(alignment: .leading, spacing: 20) {
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading, spacing: 12) {
                         H9Label(text: "Order locations")
-                        
+
                         if viewModel.createOrderModel.locationPoints.count > 0 {
                             PickedLocationsView(locationPoints: $viewModel.createOrderModel.locationPoints, onTap: { print("open choose location tapped")
                             })
@@ -41,7 +41,7 @@ struct HomeView: View {
                         } resetSchedule: {
                             viewModel.changeTimeDateForSchedule(nil)
                         }
-                        
+
                         // Commodity type section
                         ComodityTypeSection(commodityOptions: $viewModel.commodityOptions) { commodity in
                             viewModel.createOrderModel.commodity = commodity
@@ -49,11 +49,11 @@ struct HomeView: View {
                         }
                     }
                     .padding(.leading, 24)
-                        
+
                     VStack(alignment: .leading, spacing: 20) {
                         // Truck type section
                         TruckTypeSection()
-                            
+
                         // Create order button
                         PrimaryButton(title: "Create your order") {
                             // Action
@@ -71,12 +71,14 @@ struct HomeView: View {
             }
             .offset(y: -80)
             .background(.white)
-            .sheet(isPresented: $viewModel.showSelectPickUpTimeSheet) {
-                SelectPickUpTime { dateTime in
-                    viewModel.changeTimeDateForSchedule(dateTime)
+            .fullScreenCover(isPresented: $viewModel.showSelectPickUpTimeSheet) {
+                FullScreenCoverView {
+                    SelectPickUpTime { dateTime in
+                        viewModel.changeTimeDateForSchedule(dateTime)
+                    }
                 }
+                .interactiveDismissDisabled()
             }
         }
     }
 }
-    

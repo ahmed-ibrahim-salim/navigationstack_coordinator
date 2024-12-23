@@ -24,7 +24,9 @@ struct CommodityButton: View {
             .frame(maxWidth: .infinity)
             .padding()
             .background(Color(.systemGray6))
-            .cornerRadius(12)
+            .clipShape(
+                RoundedRectangle(cornerRadius: 12)
+            )
         }
     }
 }
